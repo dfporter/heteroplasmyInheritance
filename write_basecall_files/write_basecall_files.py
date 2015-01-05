@@ -7,7 +7,7 @@ import re
 from operator import itemgetter
 
 
-def parse_input():
+def parse_input(src_dir):
 	parser = argparse.ArgumentParser(description=
 	"""Requires two arguments: an input folder of .bam files, 
 	and an output folder for .bc files.
@@ -18,7 +18,7 @@ def parse_input():
 	parser.add_argument('-i', '--input_folder')
 	parser.add_argument('-o', '--output_folder')
 	parser.add_argument('-f', '--rcrs_file_path', 
-		default='lib/rcrs.fa')
+		default="%s/lib/rcrs.fa" % src_dir)
 	args = parser.parse_args()
 	# Check if input folder exists.
 	if not os.path.exists(args.input_folder):
@@ -149,6 +149,7 @@ def convert_all_bam_to_bc(bamfolder, bcfolder, rcrs_file_path):
 
 
 if __name__ == "__main__":
-	args = parse_args()
+	src_dir = os.path.dirname(os.path.realpath(sys.argv[0]))
+	args = parse_args(src_dir)
 	convert_all_bam_to_bc(args.input_folder, args.output_folder,
 		args.rcrs_file_path)
