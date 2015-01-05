@@ -1,4 +1,4 @@
-Identifies heteroplasmy in family trios (Mother, Father, a single offspring).
+Identifies heteroplasmy in family trios - a mother, father, and a single offspring.
 
 write_basecall_files converts a folder of .bam files into a folder of .bc files.
 
