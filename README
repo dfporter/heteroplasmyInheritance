@@ -7,3 +7,11 @@ write_basecall_files converts a folder of .bam files into a folder of .bc files.
 Example:
 
 python write_basecall_files -i bamfolder -o bcfolder -f lib/rcrs.fasta
+
+findHets.py finds heteroplasmic individuals in a folder of .bc files.
+
+Example:
+
+python findHets.py -b bcfolder -o prefix_for_output_files.
+
+This program will put results in a ./hets folder, separated by cutoff.
