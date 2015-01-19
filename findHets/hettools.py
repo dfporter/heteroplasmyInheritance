@@ -97,7 +97,7 @@ def catch_CRS(locus, genotype):
 	for mut in crs:
        	 	s = re.match(r'\A([AGCTN]+)([0-9]+)([AGCTN]+$)', mut)
 	        crs_lookup[ (s.groups()[1], s.groups()[2]) ] = True
-        if ((str(locus), genotype)  in crs_lookup)):
+        if ((str(locus), genotype)  in crs_lookup):
                 # This is an allele that is an error or rare polymorphism
 		# in the CRS.
                 return True
@@ -247,7 +247,6 @@ def read_crs(filename=r'lib/rcrs.fa'):
 
 
 def call_vep_and_load_info(vcfFile, keyword="none", cutoff='',
-				path_to_vep,
 				doCallVep=True, returnVepByLocus=True,
 				vep_filename=False,
 				):

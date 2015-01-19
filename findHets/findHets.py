@@ -275,8 +275,7 @@ if __name__ == '__main__':
 	args = parse_input()
 	src_path = os.path.dirname(os.path.realpath(sys.argv[0]))
 	if(not args.output):
-		out_basename = "min_total%i_allele%i" % (min_total_reads_by_strand,
-			 min_allele_count_by_strand)
+		out_basename = "default_prefix"
 	else:
 		out_basename = args.output
 	refseq = hettools.read_crs("%s/lib/rcrs.fa" % src_path)
