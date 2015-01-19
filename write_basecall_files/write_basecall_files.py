@@ -7,7 +7,7 @@ import re
 from operator import itemgetter
 
 
-def parse_input(src_dir):
+def parse_args(src_dir):
 	parser = argparse.ArgumentParser(description=
 	"""Requires two arguments: an input folder of .bam files, 
 	and an output folder for .bc files.
@@ -22,12 +22,13 @@ def parse_input(src_dir):
 	args = parser.parse_args()
 	# Check if input folder exists.
 	if not os.path.exists(args.input_folder):
+		print args.input_folder
 		print "No such input folder."
 		sys.exit()
 	# Check if output folder exists.
 	if not os.path.exists(args.output_folder):
-		print "No such input folder."
-		sys.exit()
+		print "No such output folder. Creating..."
+		os.system("mkdir %s" % args.output_folder)
 	return args
 
 
@@ -115,13 +116,13 @@ def convert_all_bam_to_bc(bamfolder, bcfolder, rcrs_file_path):
 	for name in glob.glob(folderStr):
 		numfile += 1
 		basename = re.search( r'/([_\wa-zA-Z\.0-9]+.bam)$', name).group(1)
-		basecallfilename = bcfolder + basename + '.bc'
-		if(os.path.exists(basecallfilename)):
-			print "Basecall file %s exists; will not over-write." % (
-				basecallfilename)
-			continue  # Do not overwrite existing basecall files.
+		basecallfilename = bcfolder + '/' + basename + '.bc'
+#		if(os.path.exists(basecallfilename)):
+#			print "Basecall file %s exists; will not over-write." % (
+#				basecallfilename)
+#			continue  # Do not overwrite existing basecall files.
 		outf = open(basecallfilename, 'w') 
-		cmdl = [ "samtools", "mpileup", '-q', '20', '-f', 
+		cmdl = [ "samtools", "mpileup", '-A', '-d', '10000', '-q', '20', '-f', 
 		rcrs_file_path,  name ] 
 		#  -q 20 means skip alignments with MAPQ<20. 
 		#  This cutoff is the default for Mitosek.
