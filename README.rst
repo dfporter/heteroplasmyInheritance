@@ -11,8 +11,7 @@ A -q 20 MAPQ cutoff is applied, which serves to select for unique sequences.
 
 Example: ::
 
-	$ bash extract_unique_mt.sh infolder outfolder
-
+	$ bash extract_unique_mt.sh example_1000_genomes_bams/ outfolder
 
 write_basecall_files.py
 ---------

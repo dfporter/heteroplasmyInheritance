@@ -1,2 +1,6 @@
-
+*.swp
+hets
+tmp
+test*
+*.pyc
 genomic_1000G_bams
