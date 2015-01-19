@@ -10,6 +10,7 @@ extract_unique_mt.sh calls samtools to extract MT reads.
 A -q 20 MAPQ cutoff is applied, which serves to select for unique sequences.
 
 Example: ::
+
 	$ bash extract_unique_mt.sh infolder outfolder
 
 
