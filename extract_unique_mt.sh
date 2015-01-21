@@ -10,7 +10,7 @@ for FULLBAM in $1/*.bam; do
 		#echo "samtools view -h -b ${FULLBAM} MT > $2/${OUTNAME}"
 		echo "samtools view -h -b ${FULLBAM} -q 20 chrM > $2/${OUTNAME}"
 		echo "*"
-		samtools view -h -b ${FULLBAM} chrM > $2/${OUTNAME}
+		samtools view -h -b ${FULLBAM} -q 20 chrM > $2/${OUTNAME}
 		echo "samtools sort $2/${OUTNAME} $2/$(basename ${OUTNAME} .bam)"
 		echo "*"
 		samtools sort $2/${OUTNAME} $2/$(basename ${OUTNAME} .bam)
