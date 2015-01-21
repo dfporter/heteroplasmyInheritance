@@ -1,0 +1,2 @@
+#keyword	bam_folder	bc_folder	map_file	trios_file	hets_file	vcf_file
+1kgenomes	src_path/../test_bams/	src_path/../test_bc/	src_path/lib/1kgenomes.map2	src_path/lib/1kgenomes.trios2	src_path/lib/1kgenomes.hets	src_path/lib/1kgenomes.vcf

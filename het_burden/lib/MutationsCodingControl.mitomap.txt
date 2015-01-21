@@ -1,0 +1,281 @@
+Position	Locus	Disease	Allele	Nucleotide   Change	Amino Acid Change	Homoplasmy	Heteroplasmy	Status	GB Frequency	References
+114	MT-DLOOP	BD-associated	C114T	C-T	noncoding	+	-	Reported	131	1
+150	MT-DLOOP	Longevity / Cervical Carcinoma / HPV infection risk	C150T	C-T	noncoding	+	+	Conflicting reports	2677	8
+195	MT-DLOOP	BD-associated	T195C	T-C	noncoding	+	-	Reported	5253	1
+309	MT-DLOOP	AD-weakly associated	C309CC	C-CC	noncoding	.	.	Reported	2548	1
+3308	MT-ND1	MELAS / DEAF enhancer / hypertension / LVNC	T3308C	T-C	M-T	-	+	P.M.-possibly synergistic	230	14
+3308	MT-ND1	Sudden Infant Death	T3308G	T-G	M-X	+	+	Reported	4	1
+3310	MT-ND1	NIDDM / HCM	C3310T	C-T	P-S	+	+	Reported	9	3
+3316	MT-ND1	NIDDM / LHON / PEO	G3316A	G-A	A-T	+	-	Unclear	231	14
+3337	MT-ND1	Cardiomyopathy	G3337A	G-A	V-M	+	-	Possibly synergistic	49	1
+3340	MT-ND1	Encephaloneuromyopathy	C3340T	C-T	P-S	+	-	Reported	0	1
+3376	MT-ND1	LHON MELAS overlap	G3376A	G-A	E-K	+	+	Reported	0	3
+3380	MT-ND1	MELAS	G3380A	G-A	R-Q	-	+	Reported	2	1
+3394	MT-ND1	LHON / NIDDM / CPTdeficiency / high altitude adaptation	T3394C	T-C	Y-H	+	-	Reported / Unclear	367	19
+3395	MT-ND1	HCM with hearing loss	A3395G	A-G	Y-C	-	+	Reported	15	1
+3396	MT-ND1	NSHL / MIDD	T3396C	T-C	syn	+	-	Reported / Unclear	211	2
+3397	MT-ND1	ADPD / Possibly LVNC-cardiomyopathy associated	A3397G	A-G	M-V	+	-	Reported	84	8
+3398	MT-ND1	DMDF+HCM / GDM / possibly LVNC cardiomyopathy-associated	T3398C	T-C	M-T	+	-	Reported	95	5
+3399	MT-ND1	Gestational Diabetes (GDM)	A3399T	A-T	M-I	+	-	Reported	6	1
+3407	MT-ND1	HCM / Muscle involvement	G3407A	G-A	R-H	+	-	Conflicting reports	1	3
+3418	MT-ND1	AMegL	A3418G	A-G	N-D	+	-	Reported	1	1
+3421	MT-ND1	MIDD	G3421A	G-A	V-I	+	-	Reported	40	1
+3460	MT-ND1	LHON	G3460A	G-A	A-T	+	+	Cfrm	20	125
+3481	MT-ND1	MELAS	G3481A	G-A	E-K	-	+	Reported	0	2
+3481	MT-ND1	Progressive Encephalomyopathy	G3481A	G-A	E-K	-	+	Reported	0	1
+3496	MT-ND1	LHON	G3496T	G-T	A-S	+	-	Reported / Secondary	10	2
+3497	MT-ND1	LHON	C3497T	C-T	A-V	+	-	Reported / Secondary	93	3
+3635	MT-ND1	LHON	G3635A	G-A	S-N	+	-	Cfrm	9	6
+3644	MT-ND1	BD-associated	T3644C	T-C	V-A	.	.	Reported	140	3
+3688	MT-ND1	Leigh Syndrome	G3688A	G-A	A-T	+	-	Reported	0	2
+3697	MT-ND1	MELAS / LS / LDYT	G3697A	G-A	G-S	-	+	Cfrm	0	8
+3700	MT-ND1	LHON	G3700A	G-A	A-T	+	-	Cfrm	2	2
+3733	MT-ND1	LHON	G3733A	G-A	E-K	+	+	Cfrm	2	5
+3733	MT-ND1	LHON	G3733C	G-C	E-Q	-	+	Reported	0	1
+3736	MT-ND1	LHON	G3736A	G-A	V-I	.	.	Reported	52	1
+3796	MT-ND1	Adult-Onset Dystonia	A3796G	A-G	T-A	-	+	Reported	157	3
+3833	MT-ND1	PEG	T3833A	T-A	L-Q	+	-	Reported	0	1
+3866	MT-ND1	LHON +limb claudication	T3866C	T-C	I-T	.	.	Reported	80	1
+3890	MT-ND1	Progressive encephalomyopathy / LS / optic atrophy	G3890A	G-A	R-Q	-	+	Cfrm	1	2
+3946	MT-ND1	MELAS	G3946A	G-A	E-K	+	+	Reported	2	5
+3949	MT-ND1	MELAS	T3949C	T-C	Y-H	-	+	Reported	1	5
+3959	MT-ND1	MELAS	G3959A	G-A	G-D	.	.	Reported	0	1
+3995	MT-ND1	MELAS	A3995G	A-G	N-S	.	.	Reported	8	1
+4132	MT-ND1	NAION-associated	G4132A	G-A	A-T	+	-	Reported	6	1
+4136	MT-ND1	LHON	A4136G	A-G	Y-C	+	-	Possibly synergistic	33	10
+4142	MT-ND1	"Developmental delay, seizure, hypotonia"	G4142A	G-A	R-Q	-	+	Reported	0	1
+4160	MT-ND1	LHON	T4160C	T-C	L-P	+	-	Reported	0	10
+4171	MT-ND1	LHON	C4171A	C-A	L-M	+	+	Cfrm	2	7
+4216	MT-ND1	LHON / Insulin Resistance	T4216C	T-C	Y-H	+	-	P.M. - haplogroup J / T marker	2776	33
+4633	MT-ND2	LHON candidate	C4633G	C-G	A-G	+	-	Reported	0	1
+4640	MT-ND2	LHON	C4640A	C-A	I-M	+	-	Reported	49	4
+4648	MT-ND2	PEG	T4648C	T-C	F-S	+	-	Reported	0	1
+4659	MT-ND2	possible PD risk factor	G4659A	G-A	A-T	+	-	Reported	30	1
+4681	MT-ND2	Leigh Syndrome	T4681C	T-C	L-P	-	+	Reported	1	2
+4769	MT-ND2	SZ-associated	A4769A	A-A	syn	+	-	Reported	0	1
+4833	MT-ND2	"NIDDM helper mutation; AD, PD"	A4833G	A-G	T-A	+	-	Reported; haplogroup G marker	246	2
+4852	MT-ND2	LHON	T4852A	T-A	L-Q	+	-	Reported	0	1
+4917	MT-ND2	LHON / Insulin Resistance / AMD / NRTI-PN	A4917G	A-G	N-D	+	-	Reported; haplogroup T marker	1368	26
+5001	MT-ND2	"Developmental delay, seizure, cardiomyopathy, lactic acidosis"	A5001AA	A-AA	frameshift	-	+	Reported	0	1
+5134	MT-ND2	Exercise intolerance (EXIT)	AA5134d	AAA-A	frameshift	.	.	Reported	0	5
+5178	MT-ND2	Longevity; Extraversion MI / AMS protection; blood iron metabolism	C5178A	C-A	L-M	+	-	Reported; haplogroup D marker	1465	18
+5244	MT-ND2	LHON	G5244A	G-A	G-S	-	+	Reported	0	7
+5452	MT-ND2	Progressive Encephalomyopathy	C5452T	C-T	T-M	+	-	Reported	10	1
+5460	MT-ND2	AD / PD	G5460A	G-A	A-T	+	+	P.M.	1591	7
+5460	MT-ND2	AD	G5460T	G-T	A-S	+	+	Reported	0	5
+5911	MT-CO1	Prostate Cancer	C5911T	C-T	A-V	+	-	Reported	98	1
+5913	MT-CO1	Prostate Cancer	G5913A	G-A	D-N	+	-	Reported	191	1
+5920	MT-CO1	Myoglobinuria / EXIT	G5920A	G-A	W-Ter	-	+	Reported	0	4
+5935	MT-CO1	Prostate Cancer	A5935G	A-G	N-S	+	-	Reported	1	1
+5973	MT-CO1	Prostate Cancer	G5973A	G-A	A-T	+	-	Reported	5	1
+6020	MT-CO1	Motor Neuron Disease	CGAGC6020d	CGAGC-del	AELGQ-AGPATer	-	+	Reported	0	1
+6081	MT-CO1	Prostate Cancer	G6081A	G-A	A-T	+	-	Reported	1	1
+6150	MT-CO1	Prostate Cancer	G6150A	G-A	V-I	+	-	Reported	76	1
+6253	MT-CO1	Prostate Cancer	T6253C	T-C	M-T	+	-	Reported	235	2
+6261	MT-CO1	Prostate Cancer / LHON	G6261A	G-A	A-T	+	-	Reported	143	3
+6267	MT-CO1	Prostate Cancer	G6267A	G-A	A-T	+	-	Reported	45	1
+6285	MT-CO1	Prostate Cancer	G6285A	G-A	V-I	+	-	Reported	58	1
+6328	MT-CO1	EXIT (Exercise Intolerance)	C6328T	C-T	S-F	+	-	Reported	0	2
+6340	MT-CO1	Prostate Cancer	C6340T	C-T	T-I	+	-	Reported	37	2
+6480	MT-CO1	Prostate Cancer	G6480A	G-A	V-I	+	-	Reported	70	3
+6489	MT-CO1	Therapy-Resistant Epilepsy	C6489A	C-A	L-I	-	+	Reported	64	2
+6597	MT-CO1	MELAS-like syndrome	C6597A	C-A	Q-K	-	+	Reported	0	1
+6663	MT-CO1	Prostate Cancer	A6663G	A-G	I-V	+	-	Reported	95	2
+6698	MT-CO1	Myopathy	A6698del	A-del	K-fs-Ter	-	+	Reported	0	1
+6708	MT-CO1	MM & Rhabdomyolysis	G6708A	G-A	G-Ter	-	+	Reported	0	1
+6721	MT-CO1	Acquired Idiopathic Sideroblastic Anemia	T6721C	T-C	M-T	-	+	Reported	0	2
+6742	MT-CO1	Acquired Idiopathic Sideroblastic Anemia	T6742C	T-C	I-T	-	+	Reported	0	2
+6930	MT-CO1	Multisystem Disorder	G6930A	G-A	G-Ter	-	+	Reported	0	3
+6955	MT-CO1	Mild EXIT and MR	G6955A	G-A	G-D	+	+	Reported	0	1
+7023	MT-CO1	MELAS-like syndrome	G7023A	G-A	V-M	-	+	Reported	0	1
+7041	MT-CO1	Prostate Cancer	G7041A	G-A	V-I	+	-	Reported	5	1
+7080	MT-CO1	Prostate Cancer	T7080C	T-C	F-L	+	-	Reported	27	1
+7083	MT-CO1	Prostate Cancer	A7083G	A-G	I-V	+	-	Reported	5	1
+7158	MT-CO1	Prostate Cancer	A7158G	A-G	I-V	+	-	Reported	20	1
+7305	MT-CO1	Prostate Cancer	A7305C	A-C	M-L	+	-	Reported	0	1
+7402	MT-CYB	Isolated complex IV deficiency	C7402d	C-del	frameshift: P-HPTTHSKNPYTX	-	+	Reported	0	1
+7443	MT-CO1	DEAF	A7443G	A-G	Ter-G	+	-	Reported	0	4
+7444	MT-CO1	LHON / SNHL / DEAF	G7444A	G-A	Ter-K	+	-	Reported	107	24
+7445	MT-CO1	DEAF	A7445C	A-C	Ter-S	+	-	Reported	5	5
+7445	MT-CO1	SNHL	A7445G	A-G	Ter-Ter	+	+	Cfrm	1	28
+7587	MT-CO2	Mitochondrial Encephalomyopathy	T7587C	T-C	M-T	-	+	Reported	0	2
+7598	MT-CO2	Possible LHON helper variant	G7598A	G-A	A-T	-	+	Reported	340	1
+7623	MT-CO2	LHON	C7623T	C-T	T-I	+	-	Reported	0	1
+7637	MT-CO2	PD risk factor	G7637A	G-A	E-K	-	+	Reported	2	1
+7671	MT-CO2	MM	T7671A	T-A	M-K	-	+	Reported	0	2
+7697	MT-CO2	Possible HCM susceptibility	G7697A	G-A	V-I	+	-	Reported	129	2
+7706	MT-CO2	Alpers-Huttennlocher-like	G7706A	G-A	A41T		+	Reported	4	1
+7859	MT-CO2	Progressive Encephalomyopathy	G7859A	G-A	D-N	+	-	Reported	89	1
+7868	MT-CO2	LHON	C7868T	C-T	L-F	+	-	Possibly synergistic	10	1
+7877	MT-CO2	PEG glaucoma	A7877C	A-C	K-Q	+	-	Reported	0	1
+7896	MT-CO2	Multisystem Disorder	G7896A	G-A	W-Ter	-	+	Reported	0	1
+7970	MT-CO2	Encephalopathy	G7970T	G-T	E-Ter	-	+	Reported	0	1
+7989	MT-CO2	Rhabdomyolysis	T7989C	T-C	L-P	-	+	Reported	0	2
+8010	MT-CO2	"Developmental delay, ataxia, seizure, hypotonia, lactic acidosis"	T8010C	T-C	V-A	-	+	Reported	0	1
+8042	MT-CO2	Lactic Acidosis	8042del2	AT-del	M-Ter	-	+	Reported	0	1
+8078	MT-CO2	DEAF	G8078A	G-A	V-I	+	-	Reported	15	1
+8108	MT-CO2	SNHL	A8108G	A-G	I-V	+	-	Reported	45	1
+8381	MT-ATP8	MIDD / LVNC cardiomyopathy-assoc.	A8381G	A-G	T-A	+	-	Reported	2	2
+8393	MT-ATP8	Reversible brain pseudoatrophy	C8393T	C-T	P-S	-	+	Reported	111	2
+8403	MT-ATP8	Episodic weakness and progressive neuropathy	T8403C	T-C	I-T	+	-	Reported	1	1
+8411	MT-ATP8	Severe mitochondrial disorder	A8411G	A-G	M-V	+	-	Reported	1	1
+8414	MT-ATP8	Longevity	C8414T	C-T	L-F	+	-	Reported	1213	1
+8528	MT-ATP8 / 6	Infantile cardiomyopathy	T8528C	T-C	W-R (ATP8); M(start)-T (ATP6)	+	+	Reported	0	2
+8529	MT-ATP8 / 6	Apical HCM	G8529A	G-A	W-X (ATP8); M-M (ATP6)	+	-	Reported	0	1
+8558	MT-ATP8 / 6	Possibly LVNC cardiomyopathy-associated	C8558T	C-T	P-S (ATP8); A-V (ATP6)	+	-	Reported	11	1
+8668	MT-ATP6	LHON	T8668C	T-C	W-R	+	-	Reported	18	1
+8719	MT-ATP6	Suspected mito disease	G8719A	G-A	G-Ter	-	+	Reported	1	1
+8741	MT-ATP6	MILS protective factor	T8741G	T-G	L-R	-	+	Reported	0	1
+8794	MT-ATP6	Exercise Endurance / Coronary Atherosclerosis risk	C8794T	C-T	H-Y	+	-	Reported	726	2
+8795	MT-ATP6	MILS protective factor	A8795G	A-G	H-R	-	+	Reported	0	1
+8836	MT-ATP6	LHON	A8836G	A-G	M-V	+	-	Reported	72	2
+8851	MT-ATP6	BSN	T8851C	T-C	W-R	+	+	Reported	2	2
+8932	MT-ATP6	Prostate Cancer	C8932T	C-T	P-S	+	-	Reported	84	2
+8950	MT-ATP6	LDYT	G8950A	G-A	V-I	+	-	Reported	37	2
+8993	MT-ATP6	NARP / Leigh Disease / MILS / other	T8993C	T-C	L-P	-	+	Cfrm	2	26
+8993	MT-ATP6	NARP / Leigh Disease / MILS / other	T8993G	T-G	L-R	-	+	Cfrm	4	80
+9016	MT-ATP6	LHON	A9016G	A-G	I-V	-	+	Reported	3	2
+9035	MT-ATP6	Ataxia syndromes	T9035C	T-C	L-P	+	-	Reported	0	2
+9055	MT-ATP6	PD protective factor	G9055A	G-A	A-T	+	-	Reported	1401	1
+9058	MT-ATP6	Possibly LVNC cardiomyopathy-associated	A9058G	A-G	T-A	+	-	Reported	12	1
+9098	MT-ATP6	Predisposition to anti-retroviral mito disease	T9098C	T-C	I-T	+	-	Reported	40	1
+9101	MT-ATP6	LHON	T9101C	T-C	I-T	+	-	Reported	20	3
+9139	MT-ATP6	LHON	G9139A	G-A	A-T	+	-	Reported - possibly synergistic	22	1
+9176	MT-ATP6	FBSN / Leigh Disease	T9176C	T-C	L-P	+	+	Cfrm	3	18
+9176	MT-ATP6	Leigh Disease / Spastic Paraplegia	T9176G	T-G	L-R	-	+	Cfrm	1	3
+9185	MT-ATP6	Leigh Disease / Ataxia syndromes / NARP-like disease	T9185C	T-C	L-P	+	+	Cfrm	3	9
+9191	MT-ATP6	Leigh Disease	T9191C	T-C	L-P	-	+	Reported	0	1
+9205	MT-ATP6	Seizures / Lacticacidemia	9205del2	TA-del	Ter-M	+	-	Reported	0	6
+9379	MT-CO3	MM w lactic acidosis	G9379A	G-A	W-Ter	-	+	Reported	0	1
+9438	MT-CO3	LHON	G9438A	G-A	G-S	+	-	Conflicting reports	239	13
+9478	MT-CO3	Leigh Disease	G9438A	T-C	V-A	-	+	Reported	12	1
+9479	MT-CO3	Myoglobinuria	9480del15	TTTTTCTTCGCAGGA-del	FFFAG-del	-	+	Reported	0	5
+9537	MT-CO3	Leigh Disease	C9537insC	C-CC	Q-frameshift	+	-	Reported	0	2
+9544	MT-CO3	Sporadic bilateral optic neuropathy	G9544A	G-A	G-E	.	.	Reported	0	1
+9559	MT-CO3	Rhabdomyolysis	C9559delC	C-del	P-frameshift-Ter	-	+	Reported	0	1
+9660	MT-CO3	LHON	A9660C	A-C	M-L	+	-	Reported	0	1
+9738	MT-CO3	LHON	G9738T	G-T	A-S	+	-	Reported	0	1
+9789	MT-CO3	Myopathy	T9789C	T-C	S-P	-	+	Reported	0	1
+9804	MT-CO3	LHON	G9804A	G-A	A-T	+	-	Reported	79	7
+9861	MT-CO3	AD	T9861C	T-C	F-L	+	-	Reported	39	1
+9952	MT-CO3	Mitochondrial Encephalopathy	G9952A	G-A	W-Ter	-	+	Reported	0	1
+9957	MT-CO3	PEM / MELAS / NAION	T9957C	T-C	F-L	-	+	Reported	10	6
+9972	MT-CO3	EXIT & APS2 - possible link	A9972C	A-C	I-L	-	+	Reported	1	1
+10086	MT-ND3	Hypertensive end-stage renal disease	A10086G	A-G	N-D	+	-	Reported	127	2
+10158	MT-ND3	Leigh Disease	T10158C	T-C	S-P	+	+	Cfrm	0	13
+10191	MT-ND3	Leigh Disease / Leigh-like Disease / ESOC	T10191C	T-C	S-P	-	+	Cfrm	0	17
+10197	MT-ND3	Leigh Disease / Dystonia / Stroke / LDYT	G10197A	G-A	A-T	+	+	Cfrm	4	8
+10237	MT-ND3	LHON	T10237C	T-C	I-T	+	-	Reported	42	1
+10398	MT-ND3	PD protective factor / longevity / altered cell pH / metabolic syndrome / breast cancer risk	A10398G	A-G	T-A	+	-	Reported; haplogroup IJK marker	11313	25
+10398	MT-ND3	Invasive Breast Cancer risk factor; AD; PD; BD lithium response; Type 2 DM	A10398A	A-A	T-T	+	-	Reported; haplogroup HNTUVWXK2 marker	0	14
+10543	MT-ND4L	LHON	A10543G	A-G	H-R	-	+	Reported	0	1
+10591	MT-ND4L	LHON	T10591G	T-G	F-C	-	+	Reported	0	1
+10652	MT-ND4L	BD / MDD-associated	T10652C	T-C	syn	-	+	Reported	42	1
+10663	MT-ND4L	LHON	T10663C	T-C	V-A	+	-	Cfrm	1	9
+10680	MT-ND4L	LHON	G10680A	G-A	A-T	+	-	Reported - possibly synergistic	11	2
+11084	MT-ND4	"AD, PD; MELAS"	A11084G	A-G	T-A	+	+	Reported; P.M.	146	6
+11232	MT-ND4	CPEO	T11232C	T-C	L-P	-	+	Reported	0	3
+11253	MT-ND4	LHON; PD	T11253C	T-C	I-T	+	-	Reported	170	4
+11365	MT-ND4	found in 1 HCM patient	T11365C	T-C	syn	+	-	Reported	74	1
+11467	MT-ND4	Altered brain pH	A11467G	A-G	syn	+	-	Reported	3581	1
+11622	MT-ND4	"CPEO, exercise intolerance"	TA11622del	TA-del	frameshift	-	+	Reported	0	1
+11696	MT-ND4	LHON / LDYT / DEAF / hypertension helper mut.	G11696A	G-A	V-I	+	+	Reported - possibly synergistic	153	10
+11777	MT-ND4	Leigh Disease	C11777A	C-A	R-S	-	+	Cfrm	0	10
+11778	MT-ND4	LHON / Progressive Dystonia	G11778A	G-A	R-H	+	+	Cfrm	113	246
+11832	MT-ND4	EXIT / oncocytoma	G11832A	G-A	W-Ter	-	+	Reported	0	6
+11874	MT-ND4	LHON	C11874A	C-A	T-N	+	-	Reported	0	1
+11919	MT-ND4	Thyroid Cancer Cell Line	C11919T	C-T	S-F	+	-	Reported	0	1
+11994	MT-ND4	OAT	C11994T	C-T	T-I	+	-	Conflicting reports	0	2
+12026	MT-ND4	DM	A12026G	A-G	I-V	+	-	Reported	148	2
+12027	MT-ND4	SZ-associated	T12027C	T-C	I-T	.	.	Reported	2	2
+12338	MT-ND5	DEAF1555 increased penetrance / LHON	T12338C	T-C	M-T	+	-	Conflicting reports	64	7
+12361	MT-ND5	Nonalcoholic fatty liver disease	A12361G	A-G	T-A	+	-	Reported	163	1
+12372	MT-ND5	Altered brain pH	G12372A	G-A	syn	+	-	Reported	3832	1
+12397	MT-ND5	"PD, early onset"	A12397G	A-G	T-A	+	-	Reported	134	2
+12425	MT-ND5	Mitochondrial Myopathy & Renal Failure	A12425del	A-del	N-frameshift	-	+	Reported	0	1
+12477	MT-ND5	possible HCM susceptibility	T12477C	T-C	syn	+	-	Reported	173	1
+12622	MT-ND5	Leigh Disease	G12622A	G-A	V-I	+	+	Significance unclear	3	1
+12634	MT-ND5	Thyroid Cancer Cell Line	A12634G	A-G	I-V	+	-	Reported	74	1
+12706	MT-ND5	Leigh Disease	T12706C	T-C	F-L	-	+	Cfrm	0	6
+12770	MT-ND5	MELAS	A12770G	A-G	E-G	-	+	Reported	0	4
+12782	MT-ND5	LHON	T12782G	T-G	I-S	-	+	Reported	0	1
+12811	MT-ND5	Possible LHON factor	T12811C	T-C	Y-H	+	-	Reported	214	3
+12848	MT-ND5	LHON	C12848T	C-T	A-V	-	+	Reported	0	3
+13042	MT-ND5	Optic neuropathy / retinopathy / LD	G13042A	G-A	A-T	-	+	Reported	1	5
+13045	MT-ND5	MELAS / LHON / Leigh overlap syndrome	A13045C	A-C	M-L	-	+	Reported	0	4
+13051	MT-ND5	LHON	G13051A	G-A	G-S	+	-	Reported	0	1
+13063	MT-ND5	Adult-onset Encephalopathy / Ataxia	G13063A	G-A	V-I	-	+	Reported	1	3
+13084	MT-ND5	MELAS / Leigh Disease	A13084T	A-T	S-C	-	+	Reported	0	4
+13094	MT-ND5	"Ataxia+PEO / MELAS, LD, myoclonus, fatigue"	T13094C	T-C	V-A	+	+	Reported	0	3
+13135	MT-ND5	possible HCM susceptibility	G13135A	G-A	A-T	+	-	Reported	247	1
+13271	MT-ND5	Exercise intolerance (EXIT)	T13721C	T-C	L-P	-	+	Reported	1	2
+13379	MT-ND5	LHON	A13379C	A-C	N-S	+	-	Reported	0	1
+13511	MT-ND5	Leigh-like syndrome	A13511T	A-T	K-M	-	+	Reported	0	1
+13513	MT-ND5	Leigh Disease / MELAS / LHON-MELAS Overlap Syndrome	G13513A	G-A	D-N	-	+	Cfrm	1	27
+13514	MT-ND5	Leigh Disease / MELAS	A13514G	A-G	D-G	-	+	Cfrm	0	11
+13528	MT-ND5	"LHON-like, LHON, MELAS"	A13528G	A-G	T-A	+	-	Reported	26	4
+13580	MT-ND5	Thyroid Cancer	C13580G	C-G	A-G	-	+	Reported	0	1
+13637	MT-ND5	Possible LHON factor	A13637G	A-G	Q-R	+	-	Reported	243	1
+13708	MT-ND5	LHON / Increased MS risk / higher freq in PD-ADS	G13708A	G-A	A-T	+	-	P.M. - haplogroup J marker	1912	44
+13730	MT-ND5	LHON	G13730A	G-A	G-E	-	+	Reported	0	7
+13831	MT-ND5	Thyroid Cancer Cell Line	C13831A	C-A	L-M	-	+	Reported	1	1
+13849	MT-ND5	MELAS	A13849C	A-C	N-H	+	-	Reported - possible secondary	0	1
+13967	MT-ND5	Possible LHON factor	C13967T	C-T	T-M	+	-	Reported	98	3
+14091	MT-ND5	"Developmental delay, seizure, hearing loss, diabetes"	A14091T	A-T	K-N	-	+	Reported	0	1
+14163	MT-ND6	Possible deafness factor	C14163T	C-T	A-T	+	-	Conflicting reports	3	2
+14279	MT-ND6	LHON	G14279A	G-A	S-L	+	-	Reported	2	2
+14319	MT-ND6	"PD, early onset"	T14319C	T-C	N-D	+	-	Reported	36	2
+14325	MT-ND6	LHON	T14325C	T-C	N-D	+	-	Reported	29	1
+14340	MT-ND6	SNHL	C14340T	C-T	V-M	+	-	Reported	14	1
+14430	MT-ND6	Thyroid Cancer	A14430G	A-G	W-R	+	-	Reported	0	1
+14453	MT-ND6	MELAS	G14453A	G-A	A-V	-	+	Reported	0	4
+14459	MT-ND6	LDYT / Leigh Disease	G14459A	G-A	A-V	+	+	Cfrm	3	23
+14482	MT-ND6	LHON	C14482A	C-A	M-I	+	+	Cfrm	1	11
+14482	MT-ND6	LHON	C14482G	C-G	M-I	+	+	Cfrm	0	5
+14484	MT-ND6	LHON	T14484C	T-C	M-V	+	+	Cfrm	46	135
+14487	MT-ND6	Dystonia / Leigh Disease / Ataxia / Ptosis / Epilepsy	T14487C	T-C	M-V	-	+	Cfrm	0	19
+14495	MT-ND6	LHON	A14495G	A-G	L-S	-	+	Cfrm	1	7
+14498	MT-ND6	LHON	T14498C	T-C	Y-C	+	+	Reported	0	4
+14502	MT-ND6	LHON	T14502C	T-C	I-V	+	-	Reported - possibly synergistic	111	4
+14568	MT-ND6	LHON	C14568T	C-T	G-S	+	-	Cfrm	6	9
+14577	MT-ND6	MIDM	T14577C	T-C	I-V	-	+	Reported	183	1
+14596	MT-ND6	LHON	A14596T	A-T	I-M	+	-	Reported	0	4
+14600	MT-ND6	Leigh Disease	G14600A	G-A	P-L	+	+	Reported	0	2
+14668	MT-ND6	Depressive Disorder associated	C14668T	C-T	syn	+	-	Reported	1269	1
+14787	MT-CYB	PD / MELAS	14787del4	TTAA-del	I-frameshift	-	+	Reported	0	1
+14831	MT-CYB	LHON	G14831A	G-A	A-T	+	-	Reported	72	1
+14841	MT-CYB	LHON helper mut.	A14841G	A-G	N-S	-	+	Reported	1	1
+14846	MT-CYB	EXIT	G14846A	G-A	G-S	-	+	Reported	0	5
+14849	MT-CYB	Septo-Optic Dysplasia	T14849C	T-C	S-P	-	+	Reported	0	2
+15024	MT-CYB	Possible DEAF modifier	G15024A	G-A	C-Y	+	-	Reported	13	1
+15043	MT-CYB	MDD-associated	G15043A	G-A	syn	+	-	Reported	6128	1
+15059	MT-CYB	MM	G15059A	G-A	G-Ter	-	+	Reported	0	2
+15077	MT-CYB	DEAF	G15077A	G-A	E-K	+	-	Reported	52	1
+15084	MT-CYB	EXIT	G15084A	G-A	W-Ter	-	+	Reported	0	2
+15150	MT-CYB	EXIT	G15150A	G-A	W-Ter	-	+	Reported	0	1
+15168	MT-CYB	EXIT	G15168A	G-A	W-Ter	-	+	Reported	0	2
+15197	MT-CYB	EXIT	T15197C	T-C	S-P	-	+	Reported	0	2
+15242	MT-CYB	Mitochondrial Encephalomyopathy	G15242A	G-A	G-Ter	-	+	Reported	0	2
+15243	MT-CYB	HCM	G15243A	G-A	G-E	-	+	Reported	0	2
+15257	MT-CYB	LHON	G15257A	G-A	D-N	+	-	P.M. - haplogroup J2 marker - possible helper mut.	358	43
+15287	MT-CYB	Possible DEAF helper mut.	T15287C	T-C	F-L	-	+	Further studies needed	47	1
+15395	MT-CYB	Possible LHON factor	A15395G	A-G	K-E	+	-	Reported	1	1
+15453	MT-CYB	Isolated complex III deficiency	T15453C	T-C	L-P	+	-	Reported	4	1
+15497	MT-CYB	EXIT / Obesity	G15497A	G-A	G-S	+	-	Reported	139	4
+15498	MT-CYB	EXIT	15498del24	24 bp-deletion	GDPDNYTL-del	-	+	Reported	0	2
+15498	MT-CYB	"HiCM / WPW, DEAF"	G15498A	G-A	G-D	-	+	Reported	9	6
+15579	MT-CYB	Multisystem Disorder	A15579G	A-G	Y-C	-	+	Reported	0	3
+15615	MT-CYB	EXIT / Antimycin resistance	G15615A	G-A	G-D	-	+	Reported	0	3
+15662	MT-CYB	Complex mitochondriopathy-associated	G15662	G-A	I-V	+	-	Reported	0	1
+15674	MT-CYB	LHON	T15674C	T-C	S-P	+	-	Reported	78	2
+15693	MT-CYB	Possibly LVNC cardiomyopathy-associated	T15693C	T-C	M-T	+	-	Reported	332	1
+15699	MT-CYB	Muscle Weakness SNHL and Migraine	G15699C	G-C	R-P	-	+	Reported	0	1
+15723	MT-CYB	EXIT	G15723A	G-A	W-Ter	-	+	Reported	0	1
+15761	MT-CYB	MM	G15761A	G-A	G339X		+	Reported	0	1
+15762	MT-CYB	MM	G15762A	G-A	G-E	-	+	Reported	0	1
+15773	MT-CYB	LHON	G15773A	G-A	V-M	+	-	Possibly synergistic	21	1
+15800	MT-CYB	EXIT / Myopathy	C15800T	C-T	Q-Ter	-	+	Reported	0	2
+15812	MT-CYB	LHON	G15812A	G-A	V-M	+	-	Reported / Secondary	179	18
+16189	MT-DLOOP	NIDDM / Cardiomyopathy / Endometrial cancer risk / mtDNA copy nbr / Metabolic Syndrome	T16189C	T-C	noncoding	+	-	Reported	5798	13
+16300	MT-DLOOP	BD-associated	A16300G	A-G	noncoding	+	-	Reported	131	2
+16519	MT-DLOOP	Cyclic Vomiting Syndrome with Migraine	C16519T	C-T	noncoding	+	-	Reported	0	2

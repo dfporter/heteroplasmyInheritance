@@ -15,11 +15,13 @@ def parse_input():
 	""")
 	parser.add_argument('-b', '--bc_folder', 
 	help='Folder of basecall files to parse.')
-	parser.add_argument('-o', '--output',
+	parser.add_argument('-o', '--output', default='default_prefix',
 	help='Optional prefix for output files.')
 	#parser.add_argument('-p', '--paths',
 	#help='Paths file.', default='./lib/paths2.paths')
 	args = parser.parse_args()
+	args.bc_folder = args.bc_folder.rstrip('/') + '/'
+	args.output = args.output.rstrip('/') 
 	if(not os.path.exists(args.bc_folder)):
 		print ".bc folder does not exist"
 	return args
@@ -113,8 +115,13 @@ def write_hets(cutoff, het, out_basename, refseq):
 	baseToIndexF = {'A': 3, 'T': 4, 'C': 5, 'G': 6}
 	baseToIndexR = {'A': 7, 'T': 8, 'C': 9, 'G': 10}
 	if(not os.path.exists(r'./hets')):
-		print "Creating hets directory..."
 		os.system(r'mkdir hets')
+	if(not os.path.exists(r'./hets/high')):
+		os.system(r'mkdir hets/high')
+	if(not os.path.exists(r'./hets/mid')):
+		os.system(r'mkdir hets/mid')
+	if(not os.path.exists(r'./hets/low')):
+		os.system(r'mkdir hets/low')
 	if(cutoff=='high'):
 		min_total_reads_by_strand = 10
 		min_allele_count_by_strand = 2
@@ -182,9 +189,9 @@ def write_hets(cutoff, het, out_basename, refseq):
 	het = filtered_het
 	numberOfIndividualsAboveMaf = {0: 0, 0.1: 0, 0.2: 0, 0.3: 0, 0.4: 0, 0.5: 0, 0.6: 0}
 	if(cutoff == 'high'):
-		outF = open("hets/%s.hets" % (out_basename), 'w')
+		outF = open("hets/%s/%s.hets" % (cutoff, out_basename), 'w')
 	else:
-		outF = open("hets/%s.%s.hets" % (out_basename, cutoff), 'w')
+		outF = open("hets/%s/%s.%s.hets" % (cutoff, out_basename, cutoff), 'w')
 	for p in het:
 		largestFraction = 0
 		for locus in het[p]:
@@ -208,13 +215,13 @@ def write_hets(cutoff, het, out_basename, refseq):
 
 def write_vcf(het, cutoff, refseq, no_keywords=False):
 	if(cutoff == 'high' and not no_keywords):
-		allVcf = open("hets/%s.vcf" % (out_basename), 'w')
-		majorVcf = open("hets/%s.hetMajor.vcf" % (out_basename), 'w')
-		minorVcf = open("hets/%s.hetMinor.vcf" % (out_basename), 'w')
+		allVcf = open("hets/%s/%s.vcf" % (cutoff, out_basename), 'w')
+		majorVcf = open("hets/%s/%s.hetMajor.vcf" % (cutoff, out_basename), 'w')
+		minorVcf = open("hets/%s/%s.hetMinor.vcf" % (cutoff, out_basename), 'w')
 	if(cutoff != 'high' and not no_keywords):
-		allVcf = open("hets/%s.%s.vcf" % (out_basename, cutoff), 'w')
-		majorVcf = open("hets/%s.%s.hetMajor.vcf" % (out_basename, cutoff), 'w')
-		minorVcf = open("hets/%s.%s.hetMinor.vcf" % (out_basename, cutoff), 'w')
+		allVcf = open("hets/%s/%s.%s.vcf" % (cutoff, out_basename, cutoff), 'w')
+		majorVcf = open("hets/%s/%s.%s.hetMajor.vcf" % (cutoff, out_basename, cutoff), 'w')
+		minorVcf = open("hets/%s/%s.%s.hetMinor.vcf" % (cutoff, out_basename, cutoff), 'w')
 	if(no_keywords):
 		allVcf = open("hets/%s/all.%s.vcf" % (cutoff, cutoff), 'w')
 		majorVcf = open("hets/%s/all.%s.hetMajor.vcf" % (cutoff, cutoff), 'w')
@@ -253,14 +260,17 @@ def write_vcf(het, cutoff, refseq, no_keywords=False):
 def write_stats(cutoff, num_by_maf, het, out_basename):
 	"""Writes the number of individuals above each maf cutoff"""
 	if(cutoff == 'high'):
-		outF = open("hets/%s.hets.stats" % out_basename, 'w')
+		outF = open("hets/%s/%s.hets.stats" % (cutoff, out_basename), 'w')
 	else:
-		outF = open("hets/%s.%s.hets.stats" % (out_basename, cutoff), 'w')
+		outF = open("hets/%s/%s.%s.hets.stats" % (cutoff, out_basename, cutoff), 'w')
 	lineO = "Number of individuals: %i" % len(het)
 	for k in num_by_maf:
 		lineO += "\nFraction with all heteroplasmies below"
-		lineO += " %i%%: %f" % (int((k*100)+10), 
-			float(num_by_maf[k])/float(len(het)))
+		if len(het) > 0:
+			ratio = float(num_by_maf[k])/float(len(het))
+		else:
+			ratio = 0
+		lineO += " %i%%: %f" % (int((k*100)+10), ratio)
 	outF.write(lineO)
 	outF.close()
 
