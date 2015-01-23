@@ -437,7 +437,7 @@ class cfHet:
 			li += "\t%i" % int(mdepth)
 			li += "\t%s\t%i" % (mbc[-1][0], mbc[-1][1])
 			li += "\t%s\t%i" % (mbc[-2][0], mbc[-2][1])
-			li += str(mbc)
+			li += "\t%s" % str(mbc)
 			li += "\t%s" % str(mbc)
 			if('father' not in self.loci[locus]):
 				continue
