@@ -418,31 +418,33 @@ def process_vep_files(hets_glob_str):
 if __name__ == '__main__':
 	args = parse_args()
 	in_folder = args.hets_folder
-	variant_glob_str = in_folder + '/low/*.ann_variant_freq'
-	concordance_checked_glob_str = in_folder + '/low/*.concordance_checked'
-	hets_glob_str = in_folder + '/low/*.hets'
-	gb_frequencies = hettools.getGenbankFrequencies()  # key by tuple
-	mitobank = hettools.readMitobank()  # key by tuple
-	phylo = hettools.read_phylotree()  # key by tuple
-	cat = reset_cat()
-	observed_alleles = list()
-	pathogenic_counts = dict()
-	print "\n******************\n"
-	if len(glob.glob(hets_glob_str)) == 0:
-		print "No files match %s." % hets_glob_str
-		sys.exit()
-	veps = process_vep_files(hets_glob_str)
-	read_hets_folder(hets_glob_str,
-			gb_frequencies, mitobank, phylo, veps, cat,
-			observed_alleles, pathogenic_counts=pathogenic_counts)
-	print_cat(cat, mitobank, veps)
-	print_pathogenic_counts(cat, mitobank, veps, pathogenic_counts)
-	print_obs_alleles(observed_alleles)
-	cat = reset_cat()
+	for cutoff in ['high', 'mid', 'low']:
+		print "\n***Cutoff: %s***" % cutoff
+		hets_glob_str = in_folder + '/%s/*.hets' % cutoff
+		gb_frequencies = hettools.getGenbankFrequencies()  # key by tuple
+		mitobank = hettools.readMitobank()  # key by tuple
+		phylo = hettools.read_phylotree()  # key by tuple
+		cat = reset_cat()
+		observed_alleles = list()
+		pathogenic_counts = dict()
+		print "\n******************\n"
+		if len(glob.glob(hets_glob_str)) == 0:
+			print "No files match %s." % hets_glob_str
+			sys.exit()
+		veps = process_vep_files(hets_glob_str)
+		read_hets_folder(hets_glob_str,
+				gb_frequencies, mitobank, phylo, veps, cat,
+				observed_alleles, pathogenic_counts=pathogenic_counts)
+		print_cat(cat, mitobank, veps)
+		print_pathogenic_counts(cat, mitobank, veps, pathogenic_counts)
+		print_obs_alleles(observed_alleles)
+		cat = reset_cat()
 
 # This next section concerns homoplasmy and is temporarily excluded.
 # This is old, bad code.
 old_code = """
+	variant_glob_str = in_folder + '/%s/*.ann_variant_freq' % cutoff
+	concordance_checked_glob_str = in_folder + '/%s/*.concordance_checked' % cutoff
 	observed_alleles = list()
 	pathogenic_counts = dict()
 	print "\n******************\n"
