@@ -105,22 +105,6 @@ def print_pathogenic_counts(cat, mitobank, veps,
 
 
 def print_cat(cat, mitobank, veps):
-	dumb = '''
-	cat['n_all'] = len(list(cat['all']))
-	cat['n_mitobank'] = len(list(cat['mitobank']))
-	cat['n_mitobank_common'] = len(list(cat['mitobank_common']))
-	cat['n_mitobank_rare'] = len(list(cat['mitobank_rare']))
-	cat['n_phylotree'] = len(list(cat['phylotree']))
-	cat['n_novel'] = len(list(cat['novel']))
-	cat['n_novel_deleterious'] = len(list(cat['novel_deleterious']))
-	cat['n_novel_nondeleterious'] = len(list(cat['novel_nondeleterious']))
-	cat['n_not_mitobank_but_observed'] = len(list(cat['not_mitobank_but_observed']))
-	cat['n_not_mitobank_but_observed_and_rare'] = len(list(cat['not_mitobank_but_observed_and_rare']))
-	cat['n_not_mitobank_but_observed_and_common'] = len(list(cat['not_mitobank_but_observed_and_common']))
-	cat['n_not_mitobank_but_observed_deleterious'] = len(list(cat['not_mitobank_but_observed_deleterious']))
-	cat['n_not_mitobank_but_observed_nondeleterious'] = len(list(cat['not_mitobank_but_observed_nondeleterious']))
-	cat['n_homoplasmy_change'] = len(list(cat['homoplasmy_change']))
-'''
 	cat_with_n = {}
 	for key in cat:
 		key_for_n = "n_" + key
