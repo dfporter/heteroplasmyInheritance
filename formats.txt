@@ -1,0 +1,24 @@
+lib/*.trios2:
+unused_id     proband_stable_id       mother_stable_id        father_stable_id
+        gender  proband_path    proband_file_id       dad_path        dad_file_id   
+        mother_path        mother_file_id
+
+Only the *_stable_id columns matter.
+
+The "unused_id" column is not used for anything. It can be anything.
+
+*_path columns are also not used and can be anything.
+
+The bizarre format is due to writting the scripts to use input info files as-is.
+
+Subsequent versions of this program will accept a simplified .trios file.
+
+lib/*.map2:
+stable_id	bc_filename
+
+lib/*.path:
+keyword	bam_folder	bc_folder	map_file	trios_file	hets_file	vcf_file
+
+At present, only the first five columns are used.
+
+Subsequent versions of this program will be simplified to not require this file.

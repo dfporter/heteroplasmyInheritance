@@ -1,7 +1,8 @@
 Heteroplasmy Inheritance
 ==================
 
-Identifies heteroplasmy in family trios - a mother, a father, and a single offspring.
+Identifies and analyzes heteroplasmy in family trios - a mother, a father, and a single offspring.
+
 
 extract_unique_mt.sh
 ---------
@@ -12,6 +13,32 @@ A -q 20 MAPQ cutoff is applied, which serves to select for unique sequences.
 Example: ::
 
 	$ bash extract_unique_mt.sh example_1000_genomes_bams/ outfolder
+
+bams_to_hets.py
+---------
+Identifies heteroplasmy and analyzes alleles for a folder of bam files.
+
+All scripts listed below this script are included within it.
+
+This script is a complete pathway, which expects certain library files to exist.
+
+Other scripts in this package do not require such library files and can be run on their own.
+
+Example: ::
+
+	$ python bams_to_hets.py bamfolder1 bamfolder2 bamfolder3
+
+Expects the following files to exist for each bam folder:
+
+het_burden/lib/bamfolder.path
+het_burden/lib/bamfolder.map2
+het_burden/lib/bamfolder.trios2
+
+The format of these folders is given by example in het_burden/lib/1kgenomes.*
+
+Briefly, .path links files and folders, .map2 relates individuals to files, and .trios2 describes family relations.
+
+See formats.txt for specifications.
 
 write_basecall_files.py
 ---------
