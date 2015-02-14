@@ -316,7 +316,7 @@ class cfHet:
 			self.frequencyTuples[locus][0][1], 
 			self.frequencyTuples[locus][1][0], 
 			self.frequencyTuples[locus][1][1],
-			self.siftLine[allele_mother_minor])
+			self.any_sift_info(allele_mother_minor))
 		if(allele_mother_major in mitobank
 			and allele_mother_minor in mitobank):
 			# We'll take the minor allele as the pathogenic one.
@@ -325,7 +325,13 @@ class cfHet:
 			self.frequencyTuples[locus][0][1], 
 			self.frequencyTuples[locus][1][0], 
 			self.frequencyTuples[locus][1][1],
-			self.siftLine[allele_mother_minor])
+			self.any_sift_info(allele_mother_minor))
+
+	def any_sift_info(self, allele):
+		if allele in self.siftLine:
+			return self.siftLine[allele]
+		else:
+			return ""
 
 	def write_frequencies_specific_pathogenicity(self, locus, pathogenicity):
 		# we will always output the vep locus second
@@ -344,7 +350,7 @@ class cfHet:
 				self.frequencyTuples[locus][0][0], 
 				self.frequencyTuples[locus][1][1], 
 				self.frequencyTuples[locus][1][0],
-				self.siftLine[allele_mother_major])
+				self.any_sift_info(allele_mother_major))
 		if((allele_mother_major not in self.siftType) 
 		and (allele_mother_minor in self.siftType)):
 			if(self.siftType[allele_mother_minor] == pathogenicity):
@@ -353,7 +359,7 @@ class cfHet:
 				self.frequencyTuples[locus][0][1], 
 				self.frequencyTuples[locus][1][0], 
 				self.frequencyTuples[locus][1][1],
-				self.siftLine[allele_mother_minor])
+				self.any_sift_info(allele_mother_minor))
 		if((allele_mother_major in self.siftType) 
 		and (allele_mother_minor in self.siftType)):
 			if( (self.siftType[allele_mother_minor] == pathogenicity)
@@ -366,15 +372,15 @@ class cfHet:
 				self.frequencyTuples[locus][0][1], 
 				self.frequencyTuples[locus][1][0], 
 				self.frequencyTuples[locus][1][1],
-				self.siftLine[allele_mother_major],
-				self.siftLine[allele_mother_minor])
+				self.any_sift_info(allele_mother_major),
+				self.any_sift_info(allele_mother_minor))
 			if(self.siftType[allele_mother_minor] == pathogenicity):
 				# vep allele is the mother's minor allele. Output the minor allele second like normal
 				return "%f\t%f\t%f\t%f\t%s" % (self.frequencyTuples[locus][0][0], 
 				self.frequencyTuples[locus][0][1], 
 				self.frequencyTuples[locus][1][0], 
 				self.frequencyTuples[locus][1][1],
-				self.siftLine[allele_mother_minor])
+				self.any_sift_info(allele_mother_minor))
 			if(self.siftType[allele_mother_major] == pathogenicity):
 				# only the mother's major allele is of the selected type
 				# reverse the output order so the pathogenic allele is second for mother and proband
@@ -382,7 +388,7 @@ class cfHet:
 				self.frequencyTuples[locus][0][0], 
 				self.frequencyTuples[locus][1][1], 
 				self.frequencyTuples[locus][1][0],
-				self.siftLine[allele_mother_major])
+				self.any_sift_info(allele_mother_major))
 		return False
 			
 	def write_concordance(self, locus):

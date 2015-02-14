@@ -449,12 +449,6 @@ def add_non_het_families(cfFams, families):
 		father = families[atrio][2]
 		for person in [x for x in families[atrio][0:3] if x not in known_ind]:
 			ind_in_trio_not_in_hets.add(person)
-#		if(proband in known_ind):
-#			known_fams.add((proband, mother))
-#		if(mother in known_ind):
-#			known_fams.add((proband, mother))
-#		if(father in known_ind):
-#			known_fams.add((proband, mother))
 		if((proband, mother) not in known_fams):
 			k = (proband, mother)
 			fam_in_trio_not_in_hets.add(k)
