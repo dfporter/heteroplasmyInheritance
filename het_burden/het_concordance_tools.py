@@ -435,35 +435,45 @@ def add_non_het_families(cfFams, families):
 	Returns the updated cfFams object.
 	"""
 	known_ind = set()
+	known_fams = set()
+	ind_in_trio_not_in_hets = set()
+	fam_in_trio_not_in_hets = set()
 	for k in cfFams:
 		known_ind.add(cfFams[k].proband)
 		known_ind.add(cfFams[k].mother)
 		known_ind.add(cfFams[k].father)
-	known_fams = set()
-	unknown_fams = set()
+		known_fams.add((cfFams[k].proband, cfFams[k].mother))
 	for atrio in families:
 		proband = families[atrio][0]
 		mother = families[atrio][1]
 		father = families[atrio][2]
-		if(proband in known_ind):
-			known_fams.add((proband, mother))
-		if(mother in known_ind):
-			known_fams.add((proband, mother))
-		if(father in known_ind):
-			known_fams.add((proband, mother))
+		for person in [x for x in families[atrio][0:3] if x not in known_ind]:
+			ind_in_trio_not_in_hets.add(person)
+#		if(proband in known_ind):
+#			known_fams.add((proband, mother))
+#		if(mother in known_ind):
+#			known_fams.add((proband, mother))
+#		if(father in known_ind):
+#			known_fams.add((proband, mother))
 		if((proband, mother) not in known_fams):
-			unknown_fams.add((proband, mother))
 			k = (proband, mother)
+			fam_in_trio_not_in_hets.add(k)
 			cfFams[k] = cfHet(proband=proband, mother=mother, father=father)
 	li = """add_non_het_families():
 	individuals known from het families %i
+	individuals in trios file, but not in hets file %i
+		...total individuals %i
+	families from trios file %i
 	families known from hets file %i
 	families unknown from hets file %i
-	total families now included in cfFams %i
+		...total families now included in cfFams %i
 	""" % (
 	len(list(known_ind)),
+	len(list(ind_in_trio_not_in_hets)),
+	len(list(known_ind)) + len(list(ind_in_trio_not_in_hets)),
+	len(families),
 	len(list(known_fams)),
-	len(list(unknown_fams)),
+	len(list(fam_in_trio_not_in_hets)),
 	len(cfFams))
 	print li
 	return cfFams

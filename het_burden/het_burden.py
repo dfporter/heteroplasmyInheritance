@@ -296,7 +296,7 @@ if __name__ == '__main__':
 	# Need the rcrs.
 	refseq = hettools.read_crs(args.lib + '/rcrs.fa')
 	# The following three values are universal library files,
-	# all dicts with key=tuple of allele, used for annotation
+	# all dicts with key=tuple of allele, used for annotation.
 	gb_frequencies = hettools.getGenbankFrequencies()
 	mitobank = hettools.readMitobank()
 	phylo = hettools.read_phylotree()

@@ -41,15 +41,11 @@ def line_to_sorted_bc(li):
 	s = q[0:3]
 	for i in q[3:11]:
 		s.append(int(i))
-	for i in s[3:7]:
-		totalfor += i
-	for i in s[7:11]:
-		totalrev += i
+	totalfor = sum(s[3:7])
+	totalrev = sum(s[7:11])
 	obsAlleles = {'A': 0, 'T': 0, 'C': 0, 'G': 0}
-	i = 3
-	for a in ['A', 'T', 'C', 'G']:
+	for i, a in enumerate(['A', 'T', 'C', 'G'], start=3):
 		obsAlleles[a] = s[i] + s[4+i]
-		i += 1
 	sorted_bc = sorted(obsAlleles.items(), key=itemgetter(1))
 	return [s, sorted_bc]
 
@@ -67,7 +63,7 @@ def find_het_loci_in_bc_files(folder):
 	baseToIndexF = {'A': 3, 'T': 4, 'C': 5, 'G': 6}
 	baseToIndexR = {'A': 7, 'T': 8, 'C': 9, 'G': 10}
 	for fname in glob.glob(folder):
-		basename = re.match(r'.+/(.+)\.bc$', fname).group(1)
+		basename = os.path.basename(fname).rstrip('.bc')
 		het[basename] = dict()
 		bcfile = open(fname, 'r')
 		for li in bcfile:
@@ -78,19 +74,15 @@ def find_het_loci_in_bc_files(folder):
 			s = q[0:3]
 			for i in q[3:11]:
 				s.append(int(i))
-			for i in s[3:7]:
-				totalfor += i
-			for i in s[7:11]:
-				totalrev += i
+			totalfor = sum(s[3:7])
+			totalrev = sum(s[7:11])
 			obsBases = dict()
 			if((totalfor >= min_total_reads_by_strand)
 				and (totalrev >= min_total_reads_by_strand)): 
-				# This site is usable	
+				# This site is usable.	
 				obsAlleles = {'A': 0, 'T': 0, 'C': 0, 'G': 0}
-				i = 3
-				for a in ['A', 'T', 'C', 'G']:
+				for i, a in enumerate(['A', 'T', 'C', 'G'], start=3):
 					obsAlleles[a] = s[i] + s[4+i]
-					i += 1
 				sorted_bc = sorted(obsAlleles.items(), key=itemgetter(1))
 				majAllele = sorted_bc[-1][0]	
 				minorAllele = sorted_bc[-2][0]	
@@ -98,8 +90,8 @@ def find_het_loci_in_bc_files(folder):
 				and (s[baseToIndexR[majAllele]] >= min_count_allele_by_strand) 
 				and (s[baseToIndexF[minorAllele]] >= min_count_allele_by_strand) 
 				and (s[baseToIndexR[minorAllele]] >= min_count_allele_by_strand)):
-						# We are heteroplasmic
-						het[basename][s[1]] = li
+					# We are heteroplasmic
+					het[basename][s[1]] = li
 				else:
 					# No heteroplasmy
 					pass 
@@ -140,12 +132,8 @@ def write_hets(cutoff, het, out_basename, refseq):
 			res_list = line_to_sorted_bc(het[p][locus])
 			s = res_list[0]
 			sorted_bc = res_list[1]
-			totalfor = 0
-			totalrev = 0
-			for i in s[3:7]:
-				totalfor += i
-			for i in s[7:11]:
-				totalrev += i
+			totalfor = sum(s[3:7])
+			totalrev = sum(s[7:11])
 			majAllele = sorted_bc[-1][0]	
 			minorAllele = sorted_bc[-2][0]
 			if(cutoff=='mid'):
@@ -192,23 +180,23 @@ def write_hets(cutoff, het, out_basename, refseq):
 		outF = open("hets/%s/%s.hets" % (cutoff, out_basename), 'w')
 	else:
 		outF = open("hets/%s/%s.%s.hets" % (cutoff, out_basename, cutoff), 'w')
-	for p in het:
+	for person in het:
 		largestFraction = 0
-		for locus in het[p]:
-			depth = sum([x[1] for x in het[p][locus]])
-			fractionMinor = float(het[p][locus][-2][1])/float(depth)
+		for locus in het[person]:
+			depth = sum([x[1] for x in het[person][locus]])
+			fractionMinor = float(het[person][locus][-2][1])/float(depth)
 			if(largestFraction < fractionMinor):
 				largestFraction = fractionMinor
 			outF.write("%s\t%s\t%f\t%i\t%s\t%f\t%s\t%f\t%s" % (
-				p, str(locus), fractionMinor, depth, 
-				het[p][locus][-1][0], float(het[p][locus][-1][1]), 
-				het[p][locus][-2][0], float(het[p][locus][-2][1]), 
-				str(het[p][locus])))
+				person, str(locus), fractionMinor, depth, 
+				het[person][locus][-1][0], float(het[person][locus][-1][1]), 
+				het[person][locus][-2][0], float(het[person][locus][-2][1]), 
+				str(het[person][locus])))
 			if(hettools.is_bad_loci(locus)):
 				outF.write("\tLoci is at bad allele.")
 			outF.write("\n")
-			largestFraction = float(math.trunc(largestFraction * 10))/float(10)
-			numberOfIndividualsAboveMaf[largestFraction] += 1
+		largestFraction = float(math.trunc(largestFraction * 10))/float(10)
+		numberOfIndividualsAboveMaf[largestFraction] += 1
 	outF.close()
 	return (het, numberOfIndividualsAboveMaf)
 
@@ -264,13 +252,14 @@ def write_stats(cutoff, num_by_maf, het, out_basename):
 	else:
 		outF = open("hets/%s/%s.%s.hets.stats" % (cutoff, out_basename, cutoff), 'w')
 	lineO = "Number of individuals: %i" % len(het)
-	for k in num_by_maf:
-		lineO += "\nFraction with all heteroplasmies below"
+	for frequency in sorted(num_by_maf.keys()):
+		lineO += "\nFraction with a highest abundance heteroplasmy between "
 		if len(het) > 0:
-			ratio = float(num_by_maf[k])/float(len(het))
+			ratio = float(num_by_maf[frequency])/float(len(het))
 		else:
 			ratio = 0
-		lineO += " %i%%: %f" % (int((k*100)+10), ratio)
+		lineO += " %i%% and %i%%:" % (int(frequency*100), int(frequency*100+10))
+		lineO += " %f" % ratio
 	outF.write(lineO)
 	outF.close()
 
