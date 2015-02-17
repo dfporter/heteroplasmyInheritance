@@ -52,13 +52,15 @@ def is_rare(allele_tuple, gb_frequencies):
 def read_hets_folder(hets_glob_str,
 		gb_frequencies, mitobank, phylo, veps):
 	for filename in glob.glob(hets_glob_str):
+		if re.search('filled_in', filename) is not None:
+			continue
 		output_filename = filename + '.annotations'
 		read_hets_file_output_annotated_hets(filename, output_filename,
 			gb_frequencies, mitobank, phylo, veps)
 
 
 def read_hets_file_output_annotated_hets(filename, output_filename,
-	gb_frequencies, mitobank, phylo, veps):
+		gb_frequencies, mitobank, phylo, veps):
 	hets_file = open(filename, 'r')
 	annotations_file = open(output_filename, 'w')
 	het_alleles = set()
@@ -140,6 +142,7 @@ def annotate_allele(allele_tuple,
 	for key in annotations:
 		annotations[key] = re.sub("\t", ",", annotations[key])
 	return annotations
+
 
 def process_vep_files(hets_glob_str):
 	for filename in glob.glob(hets_glob_str):
