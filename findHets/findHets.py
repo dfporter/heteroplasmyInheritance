@@ -34,9 +34,6 @@ def line_to_sorted_bc(li):
 	(sorted list of tuples in the form ('A', 23), representing observations
 	of alleles].
 	"""
-	totaldepth = 0
-	totalfor = 0
-	totalrev = 0
 	q = li.rstrip('\n').split('\t')
 	s = q[0:3]
 	for i in q[3:11]:
@@ -67,16 +64,12 @@ def find_het_loci_in_bc_files(folder):
 		het[basename] = dict()
 		bcfile = open(fname, 'r')
 		for li in bcfile:
-			totaldepth = 0
-			totalfor = 0
-			totalrev = 0
 			q = li.rstrip('\n').split('\t')
 			s = q[0:3]
 			for i in q[3:11]:
 				s.append(int(i))
 			totalfor = sum(s[3:7])
 			totalrev = sum(s[7:11])
-			obsBases = dict()
 			if((totalfor >= min_total_reads_by_strand)
 				and (totalrev >= min_total_reads_by_strand)): 
 				# This site is usable.	

@@ -3,7 +3,7 @@ Finds heteroplasmic SNPs, homoplasmic SNPs, and SNPs that are majority non-refer
 but do not fall into the categories of heteroplasmic or homoplasmic.
 
 Example:
-	python find_alts.py -b 1kgenomesbc -o 1kgenomes
+	python find_alt.py -b 1kgenomesbc -o 1kgenomes
 
 Outputs .hets, .homo, and .other files in ./hets/cutoff.
 Also outputs .vcf and .stats files for heteroplasmies.
@@ -175,7 +175,7 @@ def filter_and_write_alts(cutoff, hets, homoplasmic, majority_alt, basename, ref
 		outF = open("hets/%s/%s.homo" % (cutoff, out_basename), 'w')
 	filtered_homoplasmic = filter_alts(cutoff, homoplasmic)
 	filtered_homoplasmic = subtract_loci(filtered_homoplasmic, filtered_hets)
-	write_alts(filtered_homoplasmic, outF)
+	write_alts(filtered_homoplasmic, outF, write_freq_as_maj_allele=True)
 	if(cutoff == 'high'):
 		outF = open("hets/%s/%s.other" % (cutoff, out_basename), 'w')
 	else:
@@ -183,7 +183,7 @@ def filter_and_write_alts(cutoff, hets, homoplasmic, majority_alt, basename, ref
 	filtered_majority_alt = filter_alts(cutoff, majority_alt)
 	filtered_majority_alt = subtract_loci(filtered_majority_alt, filtered_hets)
 	filtered_majority_alt = subtract_loci(filtered_majority_alt, filtered_homoplasmic)
-	write_alts(filtered_majority_alt, outF)
+	write_alts(filtered_majority_alt, outF, write_freq_as_maj_allele=True)
 	return (filtered_hets, num_by_maf)
 
 
@@ -277,11 +277,11 @@ def write_hets(cutoff, het, out_basename, refseq):
 			filtered_het.setdefault(p, dict())
 			filtered_het[p][locus] = sorted_bc
 	outF = open("hets/%s/%s.hets" % (cutoff, out_basename), 'w')
-	num_by_maf = write_alts(filtered_het, outF, verbose=True)
+	num_by_maf = write_alts(filtered_het, outF)
 	return (filtered_het, num_by_maf)
 
 
-def write_alts(filtered_loci, outF, verbose=False):
+def write_alts(filtered_loci, outF, write_freq_as_maj_allele=False):
 	filtered_het = filtered_loci
 	num_by_maf = dict()
 	for index in range(0, 60, 1):
@@ -294,8 +294,13 @@ def write_alts(filtered_loci, outF, verbose=False):
 			fractionMinor = float(filtered_het[person][locus][-2][1])/float(depth)
 			if(largestFraction < fractionMinor):
 				largestFraction = fractionMinor
+			if write_freq_as_maj_allele:
+				frequency = float(
+					filtered_het[person][locus][-1][1])/float(depth)
+			else:
+				frequency = largestFraction
 			outF.write("%s\t%s\t%f\t%i\t%s\t%f\t%s\t%f\t%s" % (
-				person, str(locus), fractionMinor, depth,
+				person, str(locus), frequency, depth,
 				filtered_het[person][locus][-1][0],
 				float(filtered_het[person][locus][-1][1]), 
 				filtered_het[person][locus][-2][0],
@@ -376,7 +381,7 @@ def apply_cutoff(cutoff, hets, homoplasmic, majority_alt, out_basename, refseq):
 
 if __name__ == '__main__':
 	args = parse_input()
-	src_path = os.path.dirname(os.path.realpath(sys.argv[0]))
+	src_path = os.path.dirname(os.path.realpath(__file__))
 	if(not args.output):
 		out_basename = "default_prefix"
 	else:

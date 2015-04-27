@@ -505,10 +505,14 @@ def readMitobank(filename='lib/MutationsCodingControl.mitomap.txt'):
         return variants
 
 
-def read_missense(filename='lib/pathogenic_alleles/missense.txt'):
+def read_missense(filename=False):
 	"""Reads information from mitomap files and reutrns dict.
 	The dict returned holds key=(int(locus), mutant_variant) tuples
 	"""
+	if not filename:
+		src_path = os.path.dirname(os.path.realpath(__file__))
+		filename = src_path + '/lib/pathogenic_alleles/missense.txt'
+		print "missense path = %s" % filename
         variants = dict()
         miss_f = open(filename, 'r')
 	next(miss_f)
@@ -522,14 +526,20 @@ def read_missense(filename='lib/pathogenic_alleles/missense.txt'):
                                 wt = m.group(1)
                                 mut = m.group(2)
                                 allele = (int(locus), mut)
-                                variants[allele] = li.rstrip('\n')
+                                #variants[allele] = li.rstrip('\n')
+				variants[allele] = {'mutpred_score': s[8],
+						'mtDNA_selection_score': s[9]}
                 except:
                         print "error parsing line" + li
 	miss_f.close()
 	return variants
 
 
-def read_trna(filename='lib/pathogenic_alleles/all_trna.txt'):
+def read_trna(filename=False):
+	if not filename:
+		src_path = os.path.dirname(os.path.realpath(__file__))
+		filename = src_path + '/lib/pathogenic_alleles/all_trna.txt'
+		print "missense path = %s" % filename
         trna_f = open(filename, 'r')
 	next(trna_f)
 	variants = {}

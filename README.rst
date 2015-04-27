@@ -3,16 +3,43 @@ Heteroplasmy Inheritance
 
 Identifies and analyzes heteroplasmy in family trios - a mother, a father, and a single offspring.
 
+A complete processing pathway from genomic .bams to possibly pathogenic alleles is: ::
 
-extract_unique_mt.sh
+	$ python trios_file_to_mtdna_bams.py trios_file
+	$ python bams_to_hets.py bamfolder1 bamfolder2 ...
+
+The first program checks a file of trios, extracts mtDNA bam files and writes
+some library files.
+
+The second prioritizes variants.
+
+trios_file_to_mtdna_bams.py
 ---------
-extract_unique_mt.sh calls samtools to extract MT reads.
+Takes as input a single file in the following format:
+A header line is required.
+Col 1: Offspring ID
+Col 2: Mother ID
+Col 3: Father ID
+Col 4: Offspring genomic .bam path
+Col 5: Mother genomic .bam path
+Col 6: Father genomic .bam path
 
-A -q 20 MAPQ cutoff is applied, which serves to select for unique sequences.
+Other columns may contain anything.
 
-Example: ::
+The existance of the given file paths is evaluated.
+Currently, output is split by the following:
 
-	$ bash extract_unique_mt.sh example_1000_genomes_bams/ outfolder
+If genomic .bams are in folderA/folderB/.bams and folderC/folderD/.bams,
+then output is split into a folderA and folderC group.
+This weird behaviour has to be changed in the code.
+
+Output, for each folder, is a keyword.trios, .map and .paths file in ./het_burden/lib.
+mtDNA reads are extracted to .bams in ./keyword/.bams.
+
+The resulting .bams in folder ./keyword are processed completely with: ::
+
+	$ python bams_to_hets.py keyword
+
 
 bams_to_hets.py
 ---------
@@ -21,6 +48,9 @@ Identifies heteroplasmy and analyzes alleles for a folder of bam files.
 All scripts listed below this script are included within it.
 
 This script is a complete pathway, which expects certain library files to exist.
+
+All such library files are created by trios_file_to_mtdna_bams.py,
+ which needs only a trios file and genomic bams.
 
 Other scripts in this package do not require such library files and can be run on their own.
 
@@ -39,6 +69,8 @@ The format of these folders is given by example in het_burden/lib/1kgenomes.*
 Briefly, .path links files and folders, .map2 relates individuals to files, and .trios2 describes family relations.
 
 See formats.txt for specifications.
+
+The remaining tools do not need to be directly accessed.
 
 write_basecall_files.py
 ---------
